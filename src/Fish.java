@@ -1,4 +1,4 @@
-public class Fish extends Animal{
+public class Fish extends Animal implements CanSwim{
     private String color;
     private boolean fromSea;
 
@@ -16,7 +16,18 @@ public class Fish extends Animal{
     public boolean canPutEggs(){
         return getGenre().equalsIgnoreCase("Hembra");
     }
+    @Override
     public void swim(){
         System.out.printf("%s esta swim ", getName());
+    }
+    @Override
+    public void hunt() {
+        System.out.printf("%s esta nadando, se cruza con el objetivo, abre la boca y se lo come%n", getName());
+    }
+
+    @Override
+    public void makeNoise() {
+        System.out.printf("%s dice GLOB GLOB%n", getName());
+        
     }
 }

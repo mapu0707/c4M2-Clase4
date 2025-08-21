@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     private String name;
     private Integer age;
     private String genre;
@@ -27,8 +27,9 @@ public class Animal {
     public void happyBirthday(){
         age++;
     }
-    public void hunt(){
-        System.out.printf("El animal esta casando ");
-    }
+    public abstract void hunt();
+
+    public abstract void makeNoise();
+
     
 }
